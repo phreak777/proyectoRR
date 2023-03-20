@@ -1,43 +1,45 @@
-/* import from google fonts  */
+/* import google fonts  */
 
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital@0;1&family=Roboto:ital@0;1&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Irish+Grover&display=swap');
 
 /* Reina Red RGB: 168 16 22 */
 
-/* syle reset */
+/* STYLE RESET */
 
 * {
     padding: 0;
     margin: 0;
 }
 
-/* html tags */
+/* HTML TAGS */
 
 body {
     background-color: black;
     padding: 0 400px;
     font-family: 'Poppins', sans-serif;
-    /* busqué en google cómo dejar la scroll bar permanente
-    porque cuando la página era corta verticalmente
-    todos los elementos se desplazaban lateralmente
-    al cambiar de páginas con la nav bar y era feo */
-    overflow: scroll;
 }
 
 header {
-    margin: 10px;
+    margin: 0 0 0 10px;
     background-color: rgb(168, 16, 22);
 }
 
 footer {
-    height: 50px;
+    display: flex;
+    flex-direction: row;
+    height: auto;
     justify-content: space-around;
+    align-items: center;
     background-color: rgb(168, 16, 22);
 }
 
 nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
     list-style: none;
+    width: 100%;
 }
 
 form {
@@ -58,6 +60,11 @@ p {
     padding: 20px 20px;
 }
 
+ul {
+    display: flex;
+    align-items: center;
+}
+
 li {
     display: inline-block;
     padding: 0 30px;
@@ -72,7 +79,23 @@ p a {
     text-decoration: underline;
 }
 
-/* classes */
+
+
+/* CLASSES */
+
+.logo {
+    display: inline-block;
+    height: 250px;
+}
+
+.nav-items {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    font-family: 'Irish Grover', cursive;
+    font-size: 32px;
+}
 
 .foot-items {
     display: flex;
@@ -99,7 +122,7 @@ p a {
     width: 90%;
 }
 
-div.card-date p {
+article.card-date p {
     padding: 2px 20px;
 }
 
@@ -115,24 +138,6 @@ div.card-date p {
 .card-date-text p, .card-date-text h2 {
     text-align: center;
     width: 100%;
-}
-
-.center-items {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-}
-
-.logo {
-    display: inline-block;
-    height: 250px;
-
-}
-
-.nav-items {
-    text-align: center;
-    font-family: 'Irish Grover', cursive;
-    font-size: 32px;
 }
 
 .arti-news-month {
@@ -170,4 +175,9 @@ porque cuando copié el código de internet tenía los estilos in-line en el htm
     height: 300px;
     width: 400px;
     filter: invert(90%); /* agregado mío solo por curiosidad */
+}
+
+.gmap_canvas iframe {
+    width: 400px;
+    height: 300px;
 }
