@@ -1,0 +1,173 @@
+/* import from google fonts  */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital@0;1&family=Roboto:ital@0;1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Irish+Grover&display=swap');
+
+/* Reina Red RGB: 168 16 22 */
+
+/* syle reset */
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+/* html tags */
+
+body {
+    background-color: black;
+    padding: 0 400px;
+    font-family: 'Poppins', sans-serif;
+    /* busqué en google cómo dejar la scroll bar permanente
+    porque cuando la página era corta verticalmente
+    todos los elementos se desplazaban lateralmente
+    al cambiar de páginas con la nav bar y era feo */
+    overflow: scroll;
+}
+
+header {
+    margin: 10px;
+    background-color: rgb(168, 16, 22);
+}
+
+footer {
+    height: 50px;
+    justify-content: space-around;
+    background-color: rgb(168, 16, 22);
+}
+
+nav {
+    list-style: none;
+}
+
+form {
+    color: white;
+    margin-left: 100px;
+    font-size: 18px;
+}
+
+h1, h2, h3 {
+    padding: 10px;
+    color: white;
+}
+
+p {
+    font-size: larger;
+    text-align: justify;
+    color: white;
+    padding: 20px 20px;
+}
+
+li {
+    display: inline-block;
+    padding: 0 30px;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+p a {
+    text-decoration: underline;
+}
+
+/* classes */
+
+.foot-items {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    font-family: 'Irish Grover', cursive;
+    font-size: 24px;
+}
+
+.foot-socials {
+    color: white;
+    height: 48px;
+    width: 48px;
+}
+
+.card-date {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    border: 5px solid white;
+    margin: 5px 60px;
+    padding: 5px 5px;
+    width: 90%;
+}
+
+div.card-date p {
+    padding: 2px 20px;
+}
+
+.card-date-text {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: center;
+    width: 400px;
+    height: 300px;
+}
+
+.card-date-text p, .card-date-text h2 {
+    text-align: center;
+    width: 100%;
+}
+
+.center-items {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.logo {
+    display: inline-block;
+    height: 250px;
+
+}
+
+.nav-items {
+    text-align: center;
+    font-family: 'Irish Grover', cursive;
+    font-size: 32px;
+}
+
+.arti-news-month {
+    border-bottom: 2px dotted white;
+}
+
+.pic-gallery {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.pic-image {
+    height: 300px;
+    padding: 10px;
+}
+
+/* estas clases abajo las tomé de lo que encontré para insertar el minimap en fechas
+y las puse acá solo para ahorrar código y simplificar cómo se ve el html
+porque cuando copié el código de internet tenía los estilos in-line en el html */
+
+.mapouter {
+    position: relative;
+    text-align: right;
+    height: 300px;
+    width: 400px;
+    margin-left: 30px;
+    margin-bottom: 10px;
+}
+
+.gmap_canvas {
+    overflow: hidden;
+    background: none !important;
+    height: 300px;
+    width: 400px;
+    filter: invert(90%); /* agregado mío solo por curiosidad */
+}

@@ -1,0 +1,13 @@
+These are the credits we have to put in the website if it goes to prod using said resources:
+
+FACEBOOK ICON
+<a target="_blank" href="https://icons8.com/icon/0mRu7iM61Z8k/facebook">Facebook</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a>
+
+INSTAGRAM ICON
+<a target="_blank" href="https://icons8.com/icon/59813/instagram">Instagram</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a>
+
+BANDCAMP ICON
+<a target="_blank" href="https://icons8.com/icon/47593/campamento-de-la-banda">Campamento de la banda</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a>
+
+SPOTIFY ICON
+<a target="_blank" href="https://icons8.com/icon/11116/spotify">Spotify</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a>
