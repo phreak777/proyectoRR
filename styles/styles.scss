@@ -4,13 +4,13 @@ pero creo que todavía me quedan cosillas por repasar para optimizar código, y 
 defectito visual (estético) que espero no sea motivo de bajadas de puntos */
 
 /* IMPORTS  */
+@import "variables";
 @import "gallery";
-@import "colors";
+@import "gmap";
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital@0;1&family=Roboto:ital@0;1&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Irish+Grover&display=swap');
 
 /* STYLE RESET */
-
 * {
     margin: 0;
     padding: 0;
@@ -21,7 +21,6 @@ defectito visual (estético) que espero no sea motivo de bajadas de puntos */
 }
 
 /* BOOTSTRAP OVERRIDES */
-
 .container-fluid {
     margin: 0;
     padding: 0;
@@ -37,7 +36,6 @@ defectito visual (estético) que espero no sea motivo de bajadas de puntos */
 }
 
 /* HTML TAGS */
-
 body {
     display: flex;
     flex-direction: row;
@@ -268,7 +266,6 @@ form {
 }
 
 /* CLASSES */
-
 .content {
     width: 95vw;
 }
@@ -326,34 +323,8 @@ article.card-date p, article.card-date a {
     }
 }
 
-/* Buscado en internet para meter los google maps */
-
-.mapouter {
-    display: none;
-    position: relative;
-    text-align: right;
-    height: 300px;
-    width: 400px;
-    margin-left: 30px;
-    margin-bottom: 10px;
-}
-
-.gmap_canvas {
-    overflow: hidden;
-    background: none !important;
-    height: 300px;
-    width: 400px;
-    filter: invert(90%); /* agregado mío solo por curiosidad */
-    iframe {
-        width: 400px;
-        height: 300px;
-    }
-}
-
 /* MEDIA QUERIES */
-
 @media only screen and (max-width: 767px) {
-
     nav .nav-list {
         display: grid;
         position: absolute;
@@ -370,6 +341,9 @@ article.card-date p, article.card-date a {
         z-index: 3;
         display: grid !important;
     }
+    .mapouter {
+        display: none;
+    }
 }
 
 @media only screen and (min-width: 576px) {
@@ -384,9 +358,6 @@ article.card-date p, article.card-date a {
     }
     .carousel-item div iframe {
         min-width: 480px;
-    }
-    .mapouter {
-        display: block;
     }
 }
 

@@ -26,6 +26,26 @@ defectito visual (estético) que espero no sea motivo de bajadas de puntos */
   width: auto;
 }
 
+/* Buscado en internet para meter los google maps */
+.mapouter {
+  position: relative;
+  text-align: right;
+  height: 300px;
+  width: 400px;
+}
+
+.gmap_canvas {
+  overflow: hidden;
+  background: none !important;
+  height: 300px;
+  width: 400px;
+  filter: invert(90%); /* agregado mío solo por curiosidad */
+}
+.gmap_canvas iframe {
+  width: 400px;
+  height: 300px;
+}
+
 /* STYLE RESET */
 * {
   margin: 0;
@@ -338,29 +358,6 @@ article.card-date p, article.card-date a {
   padding-bottom: 20px;
 }
 
-/* Buscado en internet para meter los google maps */
-.mapouter {
-  display: none;
-  position: relative;
-  text-align: right;
-  height: 300px;
-  width: 400px;
-  margin-left: 30px;
-  margin-bottom: 10px;
-}
-
-.gmap_canvas {
-  overflow: hidden;
-  background: none !important;
-  height: 300px;
-  width: 400px;
-  filter: invert(90%); /* agregado mío solo por curiosidad */
-}
-.gmap_canvas iframe {
-  width: 400px;
-  height: 300px;
-}
-
 /* MEDIA QUERIES */
 @media only screen and (max-width: 767px) {
   nav .nav-list {
@@ -379,6 +376,9 @@ article.card-date p, article.card-date a {
     z-index: 3;
     display: grid !important;
   }
+  .mapouter {
+    display: none;
+  }
 }
 @media only screen and (min-width: 576px) {
   li {
@@ -393,9 +393,6 @@ article.card-date p, article.card-date a {
   }
   footer .carousel-item div iframe {
     min-width: 480px;
-  }
-  footer .mapouter {
-    display: block;
   }
 }
 @media only screen and (min-width: 576px) and (min-width: 768px) {
