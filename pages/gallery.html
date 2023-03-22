@@ -5,67 +5,91 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <link rel="stylesheet" href="../styles/styles.css">
+    <link rel="stylesheet" href="../styles/compiled/styles.css">
     <title>Reina Roja - Galería</title>
+    <!-- Intenté poner favicon en .ico pero no me lo leía, no sé si lo estoy salvando bien -->
     <link rel="icon" type="image/x-icon" href="../img/favicon.ico">
 </head>
 <body>
-    <header class="nav-items">
-        <div>
-            <a href="../index.html" rel="noopener noreferrer">
-                <img class="logo" src="../img/header-01.png" alt="Logo de calavera con género Hooligan Folk">
-            </a>
-        </div>
-        <nav>
-            <div>
-                <ul>
-                    <li>
+    <header>
+        <div class="container-fluid">
+            <!-- Este input abajo lo puse para poder hacer un menú desplegable con responsive, encontré por ahí en internet -->
+            <input type="checkbox" id="toggle">
+            <nav>
+                <a class="container navbar-brand" href="./index.html" rel="noopener noreferrer">
+                    <img class="logo" src="../img/logo-01.png" alt="Logo de calavera con género Hooligan Folk">
+                    <p>CHOOSE HOOLIGAN FOLK!</p>
+                </a>
+                <label class="navbar-toggler" for="toggle">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </label>
+                <ul class="container-fluid nav-list head-items">
+                    <li class="nav-item">
                         <a href="../index.html">Inicio</a>
                     </li>
-                    <li>
+                    <li class="nav-item">
                         <a href="./dates.html">Fechas</a>
                     </li>
-                    <li>
+                    <li class="nav-item">
                         <a href="./gallery.html">Galería</a>
                     </li>
-                    <li>
+                    <li class="nav-item">
                         <a href="./contact.html">Contacto</a>
                     </li>
-                    <li>
+                    <li class="nav-item">
                         <a href="./about-us.html">Nosotros</a>
                     </li>
-                    <li>
+                    <li class="nav-item">
                         <a href="./news.html">Noticias</a>
                     </li>
                 </ul>
-            </div>
-        </nav>   
-            
+            </nav>
+        </div>
     </header>
 
     <main>
         <h1>Avistamientos de La Reina Roja de Madrid</h1>
 
-        <section>
+        <section class="container-fluid flex-column">
             <h2>Puedes mirar una compilación de apariciones en directo...</h2>
-            <div class="center-items">
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/lK3rDbqlWK8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-            </div>
-            <h2>...escuchar nuestro primer álbum...</h2>
-            <div class="center-items">
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/7xtgeXkiA38" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            <div class="container-fluid">
+                <!-- Importado un carrusel directo de Bootstrap para probar, quitado el auto slide con data-bs-interval false -->
+                <div id="carouselExampleControls" class="carousel slide" data-bs-interval="false">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <div>
+                                <iframe src="https://www.youtube.com/embed/lK3rDbqlWK8" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div>
+                                <iframe src="https://www.youtube.com/embed/7xtgeXkiA38" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
             </div>
         </section>
-        <section>
+        <section class="container-fluid flex-column">
             <h2>...o ver algunas fotos</h2>
-            <div class="pic-gallery">
-                <img class="pic-image" src="../img/pic-reina-01.jpeg" alt="">
-                <img class="pic-image" src="../img/pic-reina-02.jpeg" alt="">
-                <img class="pic-image" src="../img/pic-reina-03.jpeg" alt="">
+            <div class="row pic-gallery">
+                <img class="col-sm-12 col-md-6 col-xl-3 pic-image" src="../img/pic-reina-01.jpeg" alt="Reina Roja tocando en Valencia">
+                <img class="col-sm-12 col-md-6 col-xl-3 pic-image" src="../img/pic-reina-02.jpeg" alt="Reina Roja tocando en Valencia">
+                <img class="col-sm-12 col-md-6 col-xl-3 pic-image" src="../img/pic-reina-03.jpeg" alt="Reina Roja tocando en Valencia">
             </div>
         </section>
     </main>
-    <footer>
+    <footer class="container-fluid">
         <div class="foot-items">
             <a target="_blank" href="https://carreteraymantaproducciones.com/">
                 <h3>Carretera y Manta</h3>
@@ -97,5 +121,6 @@
             </div>
         </div>
     </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 </body>
 </html>

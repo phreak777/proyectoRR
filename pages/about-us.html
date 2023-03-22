@@ -5,42 +5,48 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <link rel="stylesheet" href="../styles/styles.css">
+    <link rel="stylesheet" href="../styles/compiled/styles.css">
     <title>Reina Roja - Nosotros</title>
+    <!-- Intenté poner favicon en .ico pero no me lo leía, no sé si lo estoy salvando bien -->
     <link rel="icon" type="image/x-icon" href="../img/favicon.ico">
 </head>
 <body>
-    <header class="nav-items">
-        <div>
-            <a href="../index.html" rel="noopener noreferrer">
-                <img class="logo" src="../img/header-01.png" alt="Logo de calavera con género Hooligan Folk">
-            </a>
-        </div>
-        <nav>
-            <div>
-                <ul>
-                    <li>
+    <header>
+        <div class="container-fluid">
+            <!-- Este input abajo lo puse para poder hacer un menú desplegable con responsive, encontré por ahí en internet -->
+            <input type="checkbox" id="toggle">
+            <nav>
+                <a class="container navbar-brand" href="./index.html" rel="noopener noreferrer">
+                    <img class="logo" src="../img/logo-01.png" alt="Logo de calavera con género Hooligan Folk">
+                    <p>CHOOSE HOOLIGAN FOLK!</p>
+                </a>
+                <label class="navbar-toggler" for="toggle">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </label>
+                <ul class="container-fluid nav-list head-items">
+                    <li class="nav-item">
                         <a href="../index.html">Inicio</a>
                     </li>
-                    <li>
+                    <li class="nav-item">
                         <a href="./dates.html">Fechas</a>
                     </li>
-                    <li>
+                    <li class="nav-item">
                         <a href="./gallery.html">Galería</a>
                     </li>
-                    <li>
+                    <li class="nav-item">
                         <a href="./contact.html">Contacto</a>
                     </li>
-                    <li>
+                    <li class="nav-item">
                         <a href="./about-us.html">Nosotros</a>
                     </li>
-                    <li>
+                    <li class="nav-item">
                         <a href="./news.html">Noticias</a>
                     </li>
                 </ul>
-            </div>
-        </nav>   
-            
+            </nav>
+        </div>
     </header>
 
     <main>
@@ -64,7 +70,7 @@
             </p>
         </section>
     </main>
-    <footer>
+    <footer class="container-fluid">
         <div class="foot-items">
             <a target="_blank" href="https://carreteraymantaproducciones.com/">
                 <h3>Carretera y Manta</h3>
