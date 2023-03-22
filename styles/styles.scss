@@ -1,0 +1,439 @@
+/* PARA EL TUTOR
+Traté de limpiar un poco la contaminación de código viejo reteniendo cosas vistas en el curso
+pero creo que todavía me quedan cosillas por repasar para optimizar código, y alguno que otro
+defectito visual (estético) que espero no sea motivo de bajadas de puntos */
+
+/* import google fonts  */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital@0;1&family=Roboto:ital@0;1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Irish+Grover&display=swap');
+
+/* Reina Red RGB: 168 16 22 */
+
+/* STYLE RESET */
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    list-style: none;
+    text-decoration: none;
+}
+
+/* BOOTSTRAP OVERRIDES */
+
+.container-fluid {
+    margin: 0;
+    padding: 0;
+}
+
+.row {
+    margin: 0;
+    padding: 0;
+}
+
+.navbar-brand {
+    z-index: 5;
+}
+
+/* HTML TAGS */
+
+body {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color: black;
+    font-family: 'Poppins', sans-serif;
+}
+
+header {
+    z-index: 4;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    background-color: rgb(168, 16, 22);
+    div {
+        display: flex;
+        justify-content: center;
+        a {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+        }
+    }
+}
+
+footer {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    width: 100vw;
+    justify-content: space-around;
+    align-items: center;
+    background-color: rgb(168, 16, 22);
+    .foot-items {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        font-family: 'Irish Grover', cursive;
+        .foot-socials {
+            color: white;
+            height: 48px;
+            width: 48px;
+        }
+    }
+}
+
+nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 100vw;
+    height: 75px;
+    line-height: 75px;
+    font-family: 'Irish Grover', cursive;
+    ul li a {
+        text-decoration: none;
+    }
+    .navbar-brand {
+        color: #ffffff;
+        font-size: medium;
+        font-weight: 500;
+        letter-spacing: .5px;
+    }
+    .nav-list {
+        display: flex;
+        .nav-item {
+            cursor: pointer;
+            width: auto;
+            height: 100%;
+            padding: 0 5px;
+            transition: .4s;
+            &:hover {
+                color: white !important;
+                background: rgb(92, 6, 9);
+            }
+        }
+        .nav-link {
+            color: #f1f1f1;
+            font-size: medium;
+            font-weight: 500;
+        }
+    }
+    .navbar-toggler {
+        display: none;
+        height: min-content;
+        margin: 18px -10px 0 0;
+        cursor: pointer;
+    }
+    .bar {
+        width: 40px;
+        height: 5px;
+        margin-bottom: 10px;
+        background: #ffffff;
+        border-radius: 10%;
+        transition: .4s;
+    }
+}
+
+h1, h2, h3 {
+    padding: 10px;
+    color: white;
+    width: auto;
+}
+
+p {
+    font-size: larger;
+    text-align: justify;
+    color: white;
+    padding: 20px 20px;
+    width: auto;
+}
+
+ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+li {
+    display: inline-block;
+    padding: 0 5px;
+}
+
+a {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    text-decoration: underline;
+    &:link, &:visited, &:hover {
+        color: white;
+    }
+    p {
+        padding: 0;
+        margin: 0;
+    }
+    .logo {
+        display: inline;
+        height: auto;
+        max-height: 75px;
+    }
+}
+
+section {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    h1 {
+        font-size: xx-large;
+        text-align: center;
+    }
+    h2 {
+        font-size: x-large;
+    }
+    .content {
+    width: 98vw;
+    }
+}
+
+article {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    h1 {
+        font-size: xx-large;
+        text-align: center;
+    }
+    h2 {
+        font-size: x-large;
+    }
+    .content {
+    width: 98vw;
+    }
+}
+
+p a {
+    text-decoration: underline;
+}
+
+/* Buscado en internet para hacer un burger menu con css */
+input {
+    display: none;
+    &.contact {
+        display: block;
+    }
+}
+
+input:checked ~ nav .nav-list {
+    transform: translateY(0);
+}
+
+input:checked ~ nav .navbar-toggler {
+    margin-top: 35px;
+}
+
+input:checked ~ nav .navbar-toggler .bar:nth-child(1) {
+    position: absolute;
+    transform: rotate(45deg);
+}
+
+input:checked ~ nav .navbar-toggler .bar:nth-child(2) {
+    display: none;
+}
+
+input:checked ~ nav .navbar-toggler .bar:nth-child(3) {
+    transform: rotate(-45deg);
+}
+/* Fin de lo buscado en internet */
+
+form {
+    color: white;
+    margin-left: 100px;
+    font-size: 18px;
+}
+
+/* CLASSES */
+
+.content {
+    width: 95vw;
+}
+
+.head-items {
+    font-family: 'Irish Grover', cursive;
+    font-size: xx-large;
+}
+
+.card-date {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    border: 5px solid white;
+    margin: 5px;
+    padding: 5px;
+    
+}
+
+article.card-date p, article.card-date a {
+    font-size: larger;
+    padding: 5px;
+}
+
+.card-date-text {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 400px;
+    height: 300px;
+}
+
+.card-date-text p, .card-date-text h2 {
+    text-align: center;
+    width: 100%;
+}
+
+.carousel-item div {
+    display: flex;
+    justify-content: center;
+    iframe {
+        min-height: 320px;
+        
+    }
+}
+
+.arti-news-month {
+    display: flex;
+    flex-direction: column;
+    border-bottom: 2px dotted white;
+    div {
+        text-align: center;
+        padding-bottom: 20px;
+    }
+}
+
+.pic-gallery {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.pic-image {
+    max-width: 575px;
+    margin: 10px;
+}
+
+/* Estas dos clases abajo las tomé de lo que encontré para insertar el minimap en fechas
+y las puse acá solo para ahorrar código y simplificar cómo se ve el html
+porque cuando copié el código de internet tenía los estilos in-line en el html */
+
+.mapouter {
+    display: none;
+    position: relative;
+    text-align: right;
+    height: 300px;
+    width: 400px;
+    margin-left: 30px;
+    margin-bottom: 10px;
+}
+
+.gmap_canvas {
+    overflow: hidden;
+    background: none !important;
+    height: 300px;
+    width: 400px;
+    filter: invert(90%); /* agregado mío solo por curiosidad */
+    iframe {
+        width: 400px;
+        height: 300px;
+    }
+}
+
+/* MEDIA QUERIES */
+
+@media only screen and (max-width: 767px) {
+
+    nav .nav-list {
+        display: grid;
+        position: absolute;
+        font-size: xx-large;
+        background-color: rgb(168, 16, 22);
+        width: 50%;
+        top: 75px;
+        left: 50%;
+        transform: translateY(-120%); /* desplaza el grid del menú hacia arriba, aunque se ve un poco feo */
+        z-index: -1; /* hace que la lista no tape el logo */
+        transition: .6s;
+    }
+    nav .navbar-toggler {
+        z-index: 3;
+        display: grid !important;
+    }
+}
+
+@media only screen and (min-width: 576px) {
+    li {
+        padding: 0 10px;
+    }
+    .carousel-item div iframe {
+        min-width: 480px;
+    }
+    .mapouter {
+        display: block;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    nav .navbar-brand p {
+        font-size: large;
+    }
+    nav .head-items .nav-item {
+        font-size: large;
+    }
+    footer {
+        flex-direction: row;
+        justify-content: space-evenly;
+        height: 75px;
+        .foot-items {
+            flex-direction: row;
+            // font-size: 24px;
+            .foot-socials {
+                color: white;
+                height: 48px;
+                width: 48px;
+            }
+        }
+    }
+    a p {
+        font-size: medium;
+    }
+    .carousel-item div iframe {
+        min-width: 575px;
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    nav .navbar-brand p {
+        font-size: xx-large;
+    }
+    nav .head-items .nav-item {
+        font-size: xx-large;
+    }
+    li {
+        padding: 0 30px;
+    }
+    section .content {
+        width: 90vw;
+    }
+    article .content {
+        width: 90vw;
+    }
+}

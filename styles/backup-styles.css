@@ -79,16 +79,23 @@ p a {
     text-decoration: underline;
 }
 
+/* BOOTSTRAP OVERRIDES */
+
 
 
 /* CLASSES */
 
 .logo {
-    display: inline-block;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.logo img {
     height: 250px;
 }
 
-.nav-items {
+.head-items {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
