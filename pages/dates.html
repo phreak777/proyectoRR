@@ -11,7 +11,7 @@
     <link rel="icon" type="image/x-icon" href="../img/favicon.png">
 </head>
 <body>
-    <header>
+    <header class="container-fluid">
         <div class="container-fluid">
             <!-- Este input abajo lo puse para poder hacer un menú desplegable con responsive, encontré por ahí en internet -->
             <input type="checkbox" id="toggle">
@@ -50,54 +50,56 @@
     </header>
 
     <main>
-        <section class="container-fluid flex-column">
-            <h1>La Reina Roja de Madrid hará actos de presencia en...</h1>
-            <article class="card-date">
-                <div class="card-date-text">
-                    <h2>Bilbao - 19 de marzo de 2023</h2>
-                    <a href="http://merkatua.info/" target="_blank">Merkatua, a las 22:00</a>
-                    <p>Calle de Coscojales 2, Portugalete</p>
-                    <p>Junto a: Artistas adicionales</p>
-                </div>
-                <!-- busqué lo del mapa en google por probar :D -->
-                <div class="mapouter">
-                    <div class="gmap_canvas">
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d395.6694063861032!2d-3.018030708638418!3d43.32171919222611!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd4e59877b110373%3A0x1010bb9cdca60abd!2sMERKATUA!5e0!3m2!1sen!2sus!4v1679449660952!5m2!1sen!2sus" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
-                        <br>
+        <div class="content">
+            <section class="container-fluid flex-column">
+                <h1>La Reina Roja de Madrid hará actos de presencia en...</h1>
+                <article class="card-date">
+                    <div class="card-date-text">
+                        <h2>Bilbao - 19 de marzo de 2023</h2>
+                        <a href="http://merkatua.info/" target="_blank">Merkatua, a las 22:00</a>
+                        <p>Calle de Coscojales 2, Portugalete</p>
+                        <p>Junto a: Artistas adicionales</p>
                     </div>
-                </div>
-            </article>
-            <article class="card-date">
-                <div class="card-date-text">
-                    <h2>Madrid - 18 de marzo 2023</h2>
-                    <a href="https://gruta77.com/" target="_blank">Gruta77, a las 22:00</a>
-                    <p>Calle Cuclillo 6, San Isidro</p>
-                    <p>Junto a: Artistas adicionales</p>
-                </div>
-                <!-- busqué lo del google maps por probar :D -->
-                <div class="mapouter">
-                    <div class="gmap_canvas">
-                        <iframe src="https://maps.google.com/maps?q=gruta77&t=&z=15&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
-                        <br>
+                    <!-- busqué lo del mapa en google por probar :D -->
+                    <div class="mapouter">
+                        <div class="gmap_canvas">
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d395.6694063861032!2d-3.018030708638418!3d43.32171919222611!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd4e59877b110373%3A0x1010bb9cdca60abd!2sMERKATUA!5e0!3m2!1sen!2sus!4v1679449660952!5m2!1sen!2sus" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
+                            <br>
+                        </div>
                     </div>
-                </div>
-            </article>
-            <article class="card-date">
-                <div class="card-date-text">
-                    <h2>Valencia - 14 de enero de 2023</h2>
-                    <a href="https://www.facebook.com/UNDERLANDvlc" target="_blank">Sala UNDERLAND, a las 22:00</a>
-                    <p>Braç del Jardí 14, Masanasa
-                    <p>Junto a: Fatiga, Kostramorfosis, A Tercio Pelao</p>
-                </div>
-                <!-- busqué lo del google maps por probar :D -->
-                <div class="mapouter">
-                    <div class="gmap_canvas">
-                        <iframe src="https://maps.google.com/maps?q=Bra%C3%A7%20del%20Jard%C3%AD%2014,%20Masanasa,%20Spain&t=&z=15&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
-                        <br>
+                </article>
+                <article class="card-date">
+                    <div class="card-date-text">
+                        <h2>Madrid - 18 de marzo 2023</h2>
+                        <a href="https://gruta77.com/" target="_blank">Gruta77, a las 22:00</a>
+                        <p>Calle Cuclillo 6, San Isidro</p>
+                        <p>Junto a: Artistas adicionales</p>
                     </div>
-                </div>
-            </article>
-        </section>
+                    <!-- busqué lo del google maps por probar :D -->
+                    <div class="mapouter">
+                        <div class="gmap_canvas">
+                            <iframe src="https://maps.google.com/maps?q=gruta77&t=&z=15&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
+                            <br>
+                        </div>
+                    </div>
+                </article>
+                <article class="card-date">
+                    <div class="card-date-text">
+                        <h2>Valencia - 14 de enero de 2023</h2>
+                        <a href="https://www.facebook.com/UNDERLANDvlc" target="_blank">Sala UNDERLAND, a las 22:00</a>
+                        <p>Braç del Jardí 14, Masanasa
+                        <p>Junto a: Fatiga, Kostramorfosis, A Tercio Pelao</p>
+                    </div>
+                    <!-- busqué lo del google maps por probar :D -->
+                    <div class="mapouter">
+                        <div class="gmap_canvas">
+                            <iframe src="https://maps.google.com/maps?q=Bra%C3%A7%20del%20Jard%C3%AD%2014,%20Masanasa,%20Spain&t=&z=15&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
+                            <br>
+                        </div>
+                    </div>
+                </article>
+            </section>
+        </div>
     </main>
     <footer class="container-fluid">
         <div class="foot-items">

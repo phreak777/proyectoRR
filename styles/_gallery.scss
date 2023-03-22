@@ -1,0 +1,20 @@
+.gallery {
+    display: grid;
+    justify-items: center;
+    gap: 0.2rem;
+    grid-auto-rows: 15rem;
+    grid-template-columns: repeat(auto-fill, minmax(min(100%, 25rem), 1fr));
+    grid-auto-flow: dense;
+}
+
+/* preparé esta clase porque combinaré fotos en vertical y horizontal, pero todavía no las tengo 
+.featured {
+    grid-column: span 2;
+} */
+
+.gallery-pic {
+    border-radius: 1rem;
+    min-width: 10rem;
+    max-width: 25rem;
+    width: auto;
+}

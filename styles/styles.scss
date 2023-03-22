@@ -3,12 +3,11 @@ Traté de limpiar un poco la contaminación de código viejo reteniendo cosas vi
 pero creo que todavía me quedan cosillas por repasar para optimizar código, y alguno que otro
 defectito visual (estético) que espero no sea motivo de bajadas de puntos */
 
-/* import google fonts  */
-
+/* IMPORTS  */
+@import "gallery";
+@import "colors";
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital@0;1&family=Roboto:ital@0;1&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Irish+Grover&display=swap');
-
-/* Reina Red RGB: 168 16 22 */
 
 /* STYLE RESET */
 
@@ -54,8 +53,8 @@ header {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
-    width: 100%;
-    background-color: rgb(168, 16, 22);
+    width: 90%;
+    background-color: $color-reinaRed;
     div {
         display: flex;
         justify-content: center;
@@ -67,6 +66,13 @@ header {
     }
 }
 
+main {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+}
+
 footer {
     display: flex;
     flex-direction: column;
@@ -74,7 +80,7 @@ footer {
     width: 100vw;
     justify-content: space-around;
     align-items: center;
-    background-color: rgb(168, 16, 22);
+    background-color: $color-reinaRed;
     .foot-items {
         display: flex;
         flex-direction: column;
@@ -116,7 +122,7 @@ nav {
             transition: .4s;
             &:hover {
                 color: white !important;
-                background: rgb(92, 6, 9);
+                background: $color-reinaRedDark;
             }
         }
         .nav-link {
@@ -320,20 +326,7 @@ article.card-date p, article.card-date a {
     }
 }
 
-.pic-gallery {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-}
-
-.pic-image {
-    max-width: 575px;
-    margin: 10px;
-}
-
-/* Estas dos clases abajo las tomé de lo que encontré para insertar el minimap en fechas
-y las puse acá solo para ahorrar código y simplificar cómo se ve el html
-porque cuando copié el código de internet tenía los estilos in-line en el html */
+/* Buscado en internet para meter los google maps */
 
 .mapouter {
     display: none;
@@ -365,7 +358,7 @@ porque cuando copié el código de internet tenía los estilos in-line en el htm
         display: grid;
         position: absolute;
         font-size: xx-large;
-        background-color: rgb(168, 16, 22);
+        background-color: $color-reinaRed;
         width: 50%;
         top: 75px;
         left: 50%;
@@ -383,6 +376,12 @@ porque cuando copié el código de internet tenía los estilos in-line en el htm
     li {
         padding: 0 10px;
     }
+    footer {
+        flex-direction: row;
+        justify-content: space-evenly;
+        .foot-items {
+            flex-direction: row;
+    }
     .carousel-item div iframe {
         min-width: 480px;
     }
@@ -399,13 +398,8 @@ porque cuando copié el código de internet tenía los estilos in-line en el htm
         font-size: large;
     }
     footer {
-        flex-direction: row;
-        justify-content: space-evenly;
         height: 75px;
-        .foot-items {
-            flex-direction: row;
-            // font-size: 24px;
-            .foot-socials {
+        .foot-items .foot-socials {
                 color: white;
                 height: 48px;
                 width: 48px;

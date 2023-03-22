@@ -8,10 +8,10 @@
     <link rel="stylesheet" href="../styles/compiled/styles.css">
     <title>Reina Roja - Contacto</title>
     <!-- Intenté poner favicon en .ico pero no me lo leía, no sé si lo estoy salvando bien -->
-    <link rel="icon" type="image/x-icon" href="../img/favicon.ico">
+    <link rel="icon" type="image/x-icon" href="../img/favicon.png">
 </head>
 <body>
-    <header>
+    <header class="container-fluid">
         <div class="container-fluid">
             <!-- Este input abajo lo puse para poder hacer un menú desplegable con responsive, encontré por ahí en internet -->
             <input type="checkbox" id="toggle">
@@ -50,40 +50,42 @@
     </header>
 
     <main>
-        <h1>Solicita una audiencia con La Reina</h1>
+        <div class="content">
+            <h1>Solicita una audiencia con La Reina</h1>
 
-        <article class="container-fluid flex-column">
-            <p>
-                Si quieres estar al día con las noticias de la banda, puedes apuntarte a nuestra newsletter donde publicaremos información sobre eventos próximos, material nuevo, concursos, referencias de la escena musical y muchas otras cosas. Por favor no dudes de suscribirte, podrás hacerlo poniendo tu correo acá abajo y presionando el botón:
-            </p>
-            <form action="">
-                <label for="user-email">Correo electrónico:</label>
-                <input class="contact" type="text" name="user-email">
-                <br>
-                <input class="contact" type="submit" value="Suscribirse">
-            </form>
-        </article>
-        <section class="container-fluid flex-column">
-            <p>
-                Si por el contrario, eres tú quien quiere contactarnos para hablar sobre futuros eventos, alguna propuesta comercial, una colaboración particular con tu banda/colectivo o cualquier duda que amerite enviar un mensaje personalizado, por favor rellena el formulario siguiente y a la brevedad posible te contactaremos de vuelta:
-            </p>
-            <form action="">
-                <label for="contact-email">Correo electrónico:</label>
-                <input class="contact" type="text" name="contact-email">
-                <br>
-                <label for="contact-fullname">Nombre y apellido de contacto:</label>
-                <input class="contact" type="text" name="contact-user-fullname">
-                <br>
-                <label for="contact-phone">Número de teléfono de contacto:</label>
-                <input class="contact" type="text" name="contact-phone">
-                <br>
-                <label for="contact-inquiry">Motivo de contacto:</label>
-                <input class="contact" type="text" name="contact-inquiry">
-                <br>
-                <input class="contact" type="submit" value="Enviar formulario">
-            </form>
-            <h2>¡La Reina Roja de Madrid te agradece por tu interés!</h2>
-        </section>
+            <article class="container-fluid flex-column">
+                <p>
+                    Si quieres estar al día con las noticias de la banda, puedes apuntarte a nuestra newsletter donde publicaremos información sobre eventos próximos, material nuevo, concursos, referencias de la escena musical y muchas otras cosas. Por favor no dudes de suscribirte, podrás hacerlo poniendo tu correo acá abajo y presionando el botón:
+                </p>
+                <form action="">
+                    <label for="user-email">Correo electrónico:</label>
+                    <input class="contact" type="text" name="user-email">
+                    <br>
+                    <input class="contact" type="submit" value="Suscribirse">
+                </form>
+            </article>
+            <section class="container-fluid flex-column">
+                <p>
+                    Si por el contrario, eres tú quien quiere contactarnos para hablar sobre futuros eventos, alguna propuesta comercial, una colaboración particular con tu banda/colectivo o cualquier duda que amerite enviar un mensaje personalizado, por favor rellena el formulario siguiente y a la brevedad posible te contactaremos de vuelta:
+                </p>
+                <form action="">
+                    <label for="contact-email">Correo electrónico:</label>
+                    <input class="contact" type="text" name="contact-email">
+                    <br>
+                    <label for="contact-fullname">Nombre y apellido de contacto:</label>
+                    <input class="contact" type="text" name="contact-user-fullname">
+                    <br>
+                    <label for="contact-phone">Número de teléfono de contacto:</label>
+                    <input class="contact" type="text" name="contact-phone">
+                    <br>
+                    <label for="contact-inquiry">Motivo de contacto:</label>
+                    <input class="contact" type="text" name="contact-inquiry">
+                    <br>
+                    <input class="contact" type="submit" value="Enviar formulario">
+                </form>
+                <h2>¡La Reina Roja de Madrid te agradece por tu interés!</h2>
+            </section>
+        </div>
     </main>
     <footer class="container-fluid">
         <div class="foot-items">

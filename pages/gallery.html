@@ -8,10 +8,10 @@
     <link rel="stylesheet" href="../styles/compiled/styles.css">
     <title>Reina Roja - Galería</title>
     <!-- Intenté poner favicon en .ico pero no me lo leía, no sé si lo estoy salvando bien -->
-    <link rel="icon" type="image/x-icon" href="../img/favicon.ico">
+    <link rel="icon" type="image/x-icon" href="../img/favicon.png">
 </head>
 <body>
-    <header>
+    <header class="container-fluid">
         <div class="container-fluid">
             <!-- Este input abajo lo puse para poder hacer un menú desplegable con responsive, encontré por ahí en internet -->
             <input type="checkbox" id="toggle">
@@ -50,44 +50,55 @@
     </header>
 
     <main>
-        <h1>Avistamientos de La Reina Roja de Madrid</h1>
+        <div class="content">
+            <h1>Avistamientos de La Reina Roja de Madrid</h1>
 
-        <section class="container-fluid flex-column">
-            <h2>Puedes mirar una compilación de apariciones en directo...</h2>
-            <div class="container-fluid">
-                <!-- Importado un carrusel directo de Bootstrap para probar, quitado el auto slide con data-bs-interval false -->
-                <div id="carouselExampleControls" class="carousel slide" data-bs-interval="false">
-                    <div class="carousel-inner">
-                        <div class="carousel-item active">
-                            <div>
-                                <iframe src="https://www.youtube.com/embed/lK3rDbqlWK8" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            <section class="container-fluid flex-column">
+                <h2>Puedes mirar una compilación de apariciones en directo...</h2>
+                <div class="container-fluid">
+                    <!-- Importado un carrusel directo de Bootstrap para probar, quitado el auto slide con data-bs-interval false -->
+                    <div id="carouselExampleControls" class="carousel slide" data-bs-interval="false">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <div>
+                                    <iframe src="https://www.youtube.com/embed/lK3rDbqlWK8" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div>
+                                    <iframe src="https://www.youtube.com/embed/7xtgeXkiA38" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                                </div>
                             </div>
                         </div>
-                        <div class="carousel-item">
-                            <div>
-                                <iframe src="https://www.youtube.com/embed/7xtgeXkiA38" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-                            </div>
-                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                        </button>
                     </div>
-                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
-                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Previous</span>
-                    </button>
-                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
-                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Next</span>
-                    </button>
                 </div>
-            </div>
-        </section>
-        <section class="container-fluid flex-column">
-            <h2>...o ver algunas fotos</h2>
-            <div class="row pic-gallery">
-                <img class="col-sm-12 col-md-6 col-xl-3 pic-image" src="../img/pic-reina-01.jpeg" alt="Reina Roja tocando en Valencia">
-                <img class="col-sm-12 col-md-6 col-xl-3 pic-image" src="../img/pic-reina-02.jpeg" alt="Reina Roja tocando en Valencia">
-                <img class="col-sm-12 col-md-6 col-xl-3 pic-image" src="../img/pic-reina-03.jpeg" alt="Reina Roja tocando en Valencia">
-            </div>
-        </section>
+            </section>
+            <section class="container-fluid flex-column">
+                <h2>...o ver algunas fotos</h2>
+                <div class="container gallery">
+                    <!-- <img class="col-sm-12 col-md-6 col-xl-3 pic-image" src="../img/pic-reina-01.jpeg" alt="Reina Roja tocando en Valencia">
+                    <img class="col-sm-12 col-md-6 col-xl-3 pic-image" src="../img/pic-reina-02.jpeg" alt="Reina Roja tocando en Valencia">
+                    <img class="col-sm-12 col-md-6 col-xl-3 pic-image" src="../img/pic-reina-03.jpeg" alt="Reina Roja tocando en Valencia"> -->
+                    <img class="gallery-pic" src="../img/pic-reina-01.jpeg" alt="Reina Roja tocando en Valencia">
+                    <img class="gallery-pic" src="../img/pic-reina-02.jpeg" alt="Reina Roja tocando en Valencia">
+                    <img class="gallery-pic" src="../img/pic-reina-03.jpeg" alt="Reina Roja tocando en Valencia">
+                    <img class="gallery-pic" src="../img/pic-reina-01.jpeg" alt="Reina Roja tocando en Valencia">
+                    <img class="gallery-pic" src="../img/pic-reina-02.jpeg" alt="Reina Roja tocando en Valencia">
+                    <img class="gallery-pic" src="../img/pic-reina-03.jpeg" alt="Reina Roja tocando en Valencia">
+                    <img class="gallery-pic" src="../img/pic-reina-01.jpeg" alt="Reina Roja tocando en Valencia">
+                    <img class="gallery-pic" src="../img/pic-reina-02.jpeg" alt="Reina Roja tocando en Valencia">
+                    <img class="gallery-pic" src="../img/pic-reina-03.jpeg" alt="Reina Roja tocando en Valencia">
+                </div>
+            </section>
+        </div>
     </main>
     <footer class="container-fluid">
         <div class="foot-items">

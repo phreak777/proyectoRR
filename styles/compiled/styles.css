@@ -3,10 +3,29 @@
 Traté de limpiar un poco la contaminación de código viejo reteniendo cosas vistas en el curso
 pero creo que todavía me quedan cosillas por repasar para optimizar código, y alguno que otro
 defectito visual (estético) que espero no sea motivo de bajadas de puntos */
-/* import google fonts  */
+/* IMPORTS  */
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital@0;1&family=Roboto:ital@0;1&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Irish+Grover&display=swap");
-/* Reina Red RGB: 168 16 22 */
+.gallery {
+  display: grid;
+  justify-items: center;
+  gap: 0.2rem;
+  grid-auto-rows: 15rem;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 25rem), 1fr));
+  grid-auto-flow: dense;
+}
+
+/* preparé esta clase porque combinaré fotos en vertical y horizontal, pero todavía no las tengo 
+.featured {
+    grid-column: span 2;
+} */
+.gallery-pic {
+  border-radius: 1rem;
+  min-width: 10rem;
+  max-width: 25rem;
+  width: auto;
+}
+
 /* STYLE RESET */
 * {
   margin: 0;
@@ -48,7 +67,7 @@ header {
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
-  width: 100%;
+  width: 90%;
   background-color: rgb(168, 16, 22);
 }
 header div {
@@ -59,6 +78,13 @@ header div a {
   display: flex;
   flex-direction: row;
   justify-content: center;
+}
+
+main {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
 }
 
 footer {
@@ -312,20 +338,7 @@ article.card-date p, article.card-date a {
   padding-bottom: 20px;
 }
 
-.pic-gallery {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-}
-
-.pic-image {
-  max-width: 575px;
-  margin: 10px;
-}
-
-/* Estas dos clases abajo las tomé de lo que encontré para insertar el minimap en fechas
-y las puse acá solo para ahorrar código y simplificar cómo se ve el html
-porque cuando copié el código de internet tenía los estilos in-line en el html */
+/* Buscado en internet para meter los google maps */
 .mapouter {
   display: none;
   position: relative;
@@ -371,14 +384,21 @@ porque cuando copié el código de internet tenía los estilos in-line en el htm
   li {
     padding: 0 10px;
   }
-  .carousel-item div iframe {
+  footer {
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+  footer .foot-items {
+    flex-direction: row;
+  }
+  footer .carousel-item div iframe {
     min-width: 480px;
   }
-  .mapouter {
+  footer .mapouter {
     display: block;
   }
 }
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 576px) and (min-width: 768px) {
   nav .navbar-brand p {
     font-size: large;
   }
@@ -386,21 +406,20 @@ porque cuando copié el código de internet tenía los estilos in-line en el htm
     font-size: large;
   }
   footer {
-    flex-direction: row;
-    justify-content: space-evenly;
     height: 75px;
-  }
-  footer .foot-items {
-    flex-direction: row;
   }
   footer .foot-items .foot-socials {
     color: white;
     height: 48px;
     width: 48px;
   }
+}
+@media only screen and (min-width: 576px) {
   a p {
     font-size: medium;
   }
+}
+@media only screen and (min-width: 576px) {
   .carousel-item div iframe {
     min-width: 575px;
   }
