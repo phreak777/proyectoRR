@@ -1,0 +1,28 @@
+/* HTML TAGS */
+
+/* CLASSES */
+.navbar > .container-fluid {
+    justify-content: space-around;
+    a {
+        margin: 0;
+        padding: 0;
+    }
+    p {
+        margin: 0;
+        padding: 0;
+        text-align: center;
+    }
+    .navbar-toggler {
+        margin: 0;
+        padding: 0.5rem;
+    }
+}
+
+.punchline {
+    width: auto;
+    font-size: 1.1rem;
+}
+
+.brand_logo {
+    height: 5.5rem;
+}

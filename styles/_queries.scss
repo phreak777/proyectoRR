@@ -1,0 +1,16 @@
+@media only screen and (min-width: 576px) {
+    .mapouter {
+        display: block;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .date_card {
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    
+}

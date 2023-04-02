@@ -1,35 +1,98 @@
 @charset "UTF-8";
 /* PARA EL TUTOR
-Traté de limpiar un poco la contaminación de código viejo reteniendo cosas vistas en el curso
-pero creo que todavía me quedan cosillas por repasar para optimizar código, y alguno que otro
-defectito visual (estético) que espero no sea motivo de bajadas de puntos */
+ */
 /* IMPORTS  */
+/* HTML TAGS */
+/* CLASSES */
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital@0;1&family=Roboto:ital@0;1&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Irish+Grover&display=swap");
-.gallery {
+.navbar > .container-fluid {
+  justify-content: space-around;
+}
+.navbar > .container-fluid a {
+  margin: 0;
+  padding: 0;
+}
+.navbar > .container-fluid p {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+.navbar > .container-fluid .navbar-toggler {
+  margin: 0;
+  padding: 0.5rem;
+}
+
+.punchline {
+  width: auto;
+  font-size: 1.1rem;
+}
+
+.brand_logo {
+  height: 5.5rem;
+}
+
+/* HTML TAGS */
+/* CLASSES */
+.foot_h {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.foot_links {
+  display: flex !important;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+.foot_links a {
+  height: 48px;
+  width: 48px;
+}
+
+/* BOOTSTRAP OVERRIDES */
+.carousel {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.carousel .carousel-inner {
+  width: 90%;
+}
+
+/* CLASSES */
+section .gallery_video {
+  border: 0.1rem solid white;
+  margin: 0.2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+section .gallery_video div p {
+  text-align: center;
+  margin: 0;
+}
+section .gallery_video div a {
+  text-decoration: underline;
+}
+section .gallery_pic {
   display: grid;
   justify-items: center;
   gap: 0.2rem;
-  grid-auto-rows: 15rem;
   grid-template-columns: repeat(auto-fill, minmax(min(100%, 25rem), 1fr));
   grid-auto-flow: dense;
 }
-
-/* preparé esta clase porque combinaré fotos en vertical y horizontal, pero todavía no las tengo 
-.featured {
-    grid-column: span 2;
-} */
-.gallery-pic {
-  border-radius: 1rem;
-  min-width: 10rem;
+section .gallery_pic img {
+  width: 95%;
   max-width: 25rem;
-  width: auto;
+  margin: 0.2rem;
 }
 
 /* Buscado en internet para meter los google maps */
 .mapouter {
-  position: relative;
-  text-align: right;
+  display: none;
   height: 300px;
   width: 400px;
 }
@@ -58,383 +121,118 @@ defectito visual (estético) que espero no sea motivo de bajadas de puntos */
 
 /* BOOTSTRAP OVERRIDES */
 .container-fluid {
-  margin: 0;
+  margin: auto;
   padding: 0;
 }
 
 .row {
-  margin: 0;
+  margin: auto;
   padding: 0;
 }
 
-.navbar-brand {
-  z-index: 5;
+.navbar {
+  width: 100%;
+  padding: 0.2rem;
+}
+
+.nav-item {
+  text-align: center;
 }
 
 /* HTML TAGS */
 body {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: center;
   background-color: black;
-  font-family: "Poppins", sans-serif;
+  color: white;
 }
 
 header {
-  z-index: 4;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: center;
-  width: 90%;
   background-color: rgb(168, 16, 22);
-}
-header div {
-  display: flex;
-  justify-content: center;
-}
-header div a {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-}
-
-main {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  width: 100%;
+  padding: 0.2rem;
 }
 
 footer {
-  display: flex;
-  flex-direction: column;
-  height: auto;
-  width: 100vw;
-  justify-content: space-around;
-  align-items: center;
   background-color: rgb(168, 16, 22);
-}
-footer .foot-items {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-  align-items: center;
-  font-family: "Irish Grover", cursive;
-}
-footer .foot-items .foot-socials {
-  color: white;
-  height: 48px;
-  width: 48px;
-}
-
-nav {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
-  width: 100vw;
-  height: 75px;
-  line-height: 75px;
-  font-family: "Irish Grover", cursive;
-}
-nav ul li a {
-  text-decoration: none;
-}
-nav .navbar-brand {
-  color: #ffffff;
-  font-size: medium;
-  font-weight: 500;
-  letter-spacing: 0.5px;
-}
-nav .nav-list {
-  display: flex;
-}
-nav .nav-list .nav-item {
-  cursor: pointer;
-  width: auto;
-  height: 100%;
-  padding: 0 5px;
-  transition: 0.4s;
-}
-nav .nav-list .nav-item:hover {
-  color: white !important;
-  background: rgb(92, 6, 9);
-}
-nav .nav-list .nav-link {
-  color: #f1f1f1;
-  font-size: medium;
-  font-weight: 500;
-}
-nav .navbar-toggler {
-  display: none;
-  height: -moz-min-content;
-  height: min-content;
-  margin: 18px -10px 0 0;
-  cursor: pointer;
-}
-nav .bar {
-  width: 40px;
-  height: 5px;
-  margin-bottom: 10px;
-  background: #ffffff;
-  border-radius: 10%;
-  transition: 0.4s;
-}
-
-h1, h2, h3 {
-  padding: 10px;
-  color: white;
-  width: auto;
-}
-
-p {
-  font-size: larger;
-  text-align: justify;
-  color: white;
-  padding: 20px 20px;
-  width: auto;
-}
-
-ul {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
-  align-items: center;
-}
-
-li {
-  display: inline-block;
-  padding: 0 5px;
+  padding: 0.2rem;
+  text-align: center;
 }
 
 a {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
-  align-items: center;
-  text-decoration: underline;
-}
-a:link, a:visited, a:hover {
+  text-decoration: none;
   color: white;
-}
-a p {
-  padding: 0;
-  margin: 0;
-}
-a .logo {
-  display: inline;
-  height: auto;
-  max-height: 75px;
 }
 
 section {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: center;
+  padding: 0.2rem;
 }
-section h1 {
-  font-size: xx-large;
+section h1, section h2, section h3 {
   text-align: center;
 }
-section h2 {
-  font-size: x-large;
-}
-section .content {
-  width: 98vw;
+section p {
+  text-align: justify;
 }
 
 article {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: center;
+  padding: 0.2rem;
 }
-article h1 {
-  font-size: xx-large;
+article h1, article h2, article h3 {
   text-align: center;
 }
-article h2 {
-  font-size: x-large;
-}
-article .content {
-  width: 98vw;
-}
-
-p a {
-  text-decoration: underline;
-}
-
-/* Buscado en internet para hacer un burger menu con css */
-input {
-  display: none;
-}
-input.contact {
-  display: block;
-}
-
-input:checked ~ nav .nav-list {
-  transform: translateY(0);
-}
-
-input:checked ~ nav .navbar-toggler {
-  margin-top: 35px;
-}
-
-input:checked ~ nav .navbar-toggler .bar:nth-child(1) {
-  position: absolute;
-  transform: rotate(45deg);
-}
-
-input:checked ~ nav .navbar-toggler .bar:nth-child(2) {
-  display: none;
-}
-
-input:checked ~ nav .navbar-toggler .bar:nth-child(3) {
-  transform: rotate(-45deg);
-}
-
-/* Fin de lo buscado en internet */
-form {
-  color: white;
-  margin-left: 100px;
-  font-size: 18px;
+article p {
+  text-align: justify;
 }
 
 /* CLASSES */
-.content {
-  width: 95vw;
+.active {
+  text-decoration: underline;
 }
 
-.head-items {
-  font-family: "Irish Grover", cursive;
-  font-size: xx-large;
-}
-
-.card-date {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
-  border: 5px solid white;
-  margin: 5px;
-  padding: 5px;
-}
-
-article.card-date p, article.card-date a {
-  font-size: larger;
-  padding: 5px;
-}
-
-.card-date-text {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: center;
-  width: 400px;
-  height: 300px;
-}
-
-.card-date-text p, .card-date-text h2 {
-  text-align: center;
-  width: 100%;
-}
-
-.carousel-item div {
-  display: flex;
-  justify-content: center;
-}
-.carousel-item div iframe {
-  min-height: 320px;
-}
-
-.arti-news-month {
+.date_card {
+  border: 0.1rem solid white;
+  margin: 0.4rem 0;
   display: flex;
   flex-direction: column;
-  border-bottom: 2px dotted white;
-}
-.arti-news-month div {
+  align-items: center;
   text-align: center;
-  padding-bottom: 20px;
+}
+.date_card div p {
+  text-align: center;
+  margin: 0;
+}
+.date_card div a {
+  text-decoration: underline;
 }
 
-/* MEDIA QUERIES */
-@media only screen and (max-width: 767px) {
-  nav .nav-list {
-    display: grid;
-    position: absolute;
-    font-size: xx-large;
-    background-color: rgb(168, 16, 22);
-    width: 50%;
-    top: 75px;
-    left: 50%;
-    transform: translateY(-120%); /* desplaza el grid del menú hacia arriba, aunque se ve un poco feo */
-    z-index: -1; /* hace que la lista no tape el logo */
-    transition: 0.6s;
-  }
-  nav .navbar-toggler {
-    z-index: 3;
-    display: grid !important;
-  }
+.news_month {
+  border: 0.1rem solid white;
+  margin: 0.4rem 0;
+}
+.news_month div {
+  border-top: 0.1rem dotted white;
+  display: flex;
+  flex-direction: column;
+}
+.news_month div a {
+  text-align: center;
+}
+
+.newsletter {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.newsletter input {
+  margin: 0.4rem 0;
+  width: 90%;
+}
+
+@media only screen and (min-width: 576px) {
   .mapouter {
-    display: none;
+    display: block;
   }
 }
-@media only screen and (min-width: 576px) {
-  li {
-    padding: 0 10px;
-  }
-  footer {
+@media only screen and (min-width: 768px) {
+  .date_card {
     flex-direction: row;
     justify-content: space-evenly;
-  }
-  footer .foot-items {
-    flex-direction: row;
-  }
-  footer .carousel-item div iframe {
-    min-width: 480px;
-  }
-}
-@media only screen and (min-width: 576px) and (min-width: 768px) {
-  nav .navbar-brand p {
-    font-size: large;
-  }
-  nav .head-items .nav-item {
-    font-size: large;
-  }
-  footer {
-    height: 75px;
-  }
-  footer .foot-items .foot-socials {
-    color: white;
-    height: 48px;
-    width: 48px;
-  }
-}
-@media only screen and (min-width: 576px) {
-  a p {
-    font-size: medium;
-  }
-}
-@media only screen and (min-width: 576px) {
-  .carousel-item div iframe {
-    min-width: 575px;
-  }
-}
-@media only screen and (min-width: 1200px) {
-  nav .navbar-brand p {
-    font-size: xx-large;
-  }
-  nav .head-items .nav-item {
-    font-size: xx-large;
-  }
-  li {
-    padding: 0 30px;
-  }
-  section .content {
-    width: 90vw;
-  }
-  article .content {
-    width: 90vw;
   }
 }/*# sourceMappingURL=styles.css.map */

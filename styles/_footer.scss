@@ -1,0 +1,19 @@
+/* HTML TAGS */
+
+/* CLASSES */
+.foot_h {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.foot_links {
+    display: flex !important;
+    flex-direction: row;
+    justify-content: space-evenly;
+    a {
+        height: 48px;
+        width: 48px;
+    }
+}
