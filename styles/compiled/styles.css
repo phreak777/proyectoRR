@@ -64,7 +64,7 @@
 /* CLASSES */
 section .gallery_video {
   border: 0.1rem solid white;
-  margin: 0.2rem;
+  padding: 0.2rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -78,6 +78,8 @@ section .gallery_video div a {
   text-decoration: underline;
 }
 section .gallery_pic {
+  border: 0.1rem solid white;
+  padding: 0.2rem;
   display: grid;
   justify-items: center;
   gap: 0.2rem;
@@ -85,6 +87,8 @@ section .gallery_pic {
   grid-auto-flow: dense;
 }
 section .gallery_pic img {
+  border: none;
+  padding: 0;
   width: 95%;
   max-width: 25rem;
   margin: 0.2rem;

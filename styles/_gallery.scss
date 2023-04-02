@@ -12,7 +12,7 @@
 section {
     .gallery_video {
         border: $border-white-small;
-        margin: $padding-576;
+        padding: $padding-576;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -28,12 +28,16 @@ section {
         }
     }
     .gallery_pic {
+        border: $border-white-small;
+        padding: $padding-576;
         display: grid;
         justify-items: center;
         gap: 0.2rem;
         grid-template-columns: repeat(auto-fill, minmax(min(100%, 25rem), 1fr));
         grid-auto-flow: dense;
         img {
+            border: none;
+            padding: 0;
             width: 95%;
             max-width: 25rem;
             margin: $margin-576;
