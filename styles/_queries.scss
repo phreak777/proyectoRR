@@ -1,16 +1,55 @@
+@media only screen and (max-width: 280px) {
+    header {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        nav > div {
+            a {
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                width: 100%;
+            }
+            button.navbar-toggler {
+                width: 100%;
+            }
+        }
+    }
+}
+
 @media only screen and (min-width: 576px) {
     .mapouter {
         display: block;
     }
+    .foot_links {
+        width: 60%;
+    }
 }
 
 @media only screen and (min-width: 768px) {
+    main {
+        max-width: 80%;
+    }
+    footer {
+        flex-direction: row;
+        justify-content: space-between;
+        padding: $padding-768;
+        .foot_links {
+            width: 50%;
+            justify-content: left;
+        }
+    }
     .date_card {
         flex-direction: row;
         justify-content: space-evenly;
     }
+    .mapouter {
+        margin: $margin-768;
+    }
 }
 
 @media only screen and (min-width: 1200px) {
-    
+    main {
+        max-width: 70%;
+    }
 }

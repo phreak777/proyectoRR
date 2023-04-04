@@ -2,12 +2,16 @@
 /* PARA EL TUTOR
  */
 /* IMPORTS  */
+/* PARA EL TUTOR
+Puse variables acá como parte del ejercicio,
+pero creo que las estoy usando de una manera un poco desorganizada.
+Sin embargo, aquí están para por lo menos demostrar el ejercicio
+*/
 /* HTML TAGS */
 /* CLASSES */
-@import url("https://fonts.googleapis.com/css2?family=Poppins:ital@0;1&family=Roboto:ital@0;1&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Irish+Grover&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Poppins:ital@0;1&family=Roboto:ital@0;1&display=swap");
 .navbar > .container-fluid {
-  justify-content: space-around;
+  justify-content: space-between;
 }
 .navbar > .container-fluid a {
   margin: 0;
@@ -21,15 +25,23 @@
 .navbar > .container-fluid .navbar-toggler {
   margin: 0;
   padding: 0.5rem;
+  color: black;
+  border-color: black;
 }
 
-.punchline {
-  width: auto;
-  font-size: 1.1rem;
+.nav-item {
+  font-size: 1.6rem;
+  border: 0.1rem solid black;
+  margin: 0.1rem 0;
+}
+.nav-item:hover {
+  filter: invert(100%);
 }
 
 .brand_logo {
   height: 5.5rem;
+  animation: heartbeat 1s infinite alternate;
+  transform-origin: center;
 }
 
 /* HTML TAGS */
@@ -42,9 +54,10 @@
 }
 
 .foot_links {
-  display: flex !important;
+  display: flex;
   flex-direction: row;
   justify-content: space-evenly;
+  width: 100%;
 }
 .foot_links a {
   height: 48px;
@@ -94,11 +107,31 @@ section .gallery_pic img {
   margin: 0.2rem;
 }
 
+.faded {
+  position: relative;
+  display: inline-block;
+  color: black;
+}
+.faded:before {
+  content: "";
+  position: absolute;
+  display: block;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-collapse: separate;
+}
+.faded.faded-all:before {
+  box-shadow: inset 0 0 20px 16px;
+}
+
 /* Buscado en internet para meter los google maps */
 .mapouter {
   display: none;
   height: 300px;
   width: 400px;
+  margin: 0.2rem;
 }
 
 .gmap_canvas {
@@ -145,18 +178,30 @@ section .gallery_pic img {
 
 /* HTML TAGS */
 body {
+  font-family: Barlow;
+  min-height: 100vh;
   background-color: black;
   color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 header {
+  width: 100%;
   background-color: rgb(168, 16, 22);
   padding: 0.2rem;
 }
 
 footer {
+  margin-top: auto;
+  position: sticky;
+  width: 100%;
   background-color: rgb(168, 16, 22);
   padding: 0.2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   text-align: center;
 }
 
@@ -165,24 +210,27 @@ a {
   color: white;
 }
 
-section {
+main {
+  width: 95%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+main section, main article {
+  width: 100%;
   padding: 0.2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
-section h1, section h2, section h3 {
+main section h1, main section h2, main section h3, main article h1, main article h2, main article h3 {
+  font-weight: bold;
   text-align: center;
+  margin: 0 0 1rem;
 }
-section p {
+main section p, main article p {
   text-align: justify;
-}
-
-article {
-  padding: 0.2rem;
-}
-article h1, article h2, article h3 {
-  text-align: center;
-}
-article p {
-  text-align: justify;
+  margin: 0 0 1rem;
 }
 
 /* CLASSES */
@@ -220,23 +268,109 @@ article p {
 }
 
 .newsletter {
+  width: 80%;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 .newsletter input {
   margin: 0.4rem 0;
-  width: 90%;
+  width: 100%;
 }
 
+/* IDs */
+#logo-card {
+  background-color: white;
+  height: 18rem;
+  border-radius: 1rem;
+  margin: 1rem 0;
+  transition: width 2s, height 2s, background-color 2s, rotate 2s;
+}
+#logo-card:hover {
+  animation-name: color_invert;
+  animation-duration: 4s;
+}
+
+/* ANIMATION KEYFRAMES */
+@keyframes color_invert {
+  0% {
+    filter: invert(0%);
+  }
+  20% {
+    filter: invert(100%);
+  }
+  80% {
+    filter: invert(100%);
+  }
+  100% {
+    filter: invert(0%);
+  }
+}
+@keyframes heartbeat {
+  0% {
+    transform: scale(1);
+  }
+  40% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.02);
+  }
+  60% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+/* QUERIES */
+@media only screen and (max-width: 280px) {
+  header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  header nav > div a {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+  }
+  header nav > div button.navbar-toggler {
+    width: 100%;
+  }
+}
 @media only screen and (min-width: 576px) {
   .mapouter {
     display: block;
   }
+  .foot_links {
+    width: 60%;
+  }
 }
 @media only screen and (min-width: 768px) {
+  main {
+    max-width: 80%;
+  }
+  footer {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0.5rem;
+  }
+  footer .foot_links {
+    width: 50%;
+    justify-content: left;
+  }
   .date_card {
     flex-direction: row;
     justify-content: space-evenly;
+  }
+  .mapouter {
+    margin: 0.5rem;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  main {
+    max-width: 70%;
   }
 }/*# sourceMappingURL=styles.css.map */

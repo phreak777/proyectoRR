@@ -1,3 +1,8 @@
+/* PARA EL TUTOR
+Puse variables acá como parte del ejercicio,
+pero creo que las estoy usando de una manera un poco desorganizada.
+Sin embargo, aquí están para por lo menos demostrar el ejercicio
+*/
 
 // COLOR PALETTE
 
@@ -7,8 +12,17 @@ $color-reinaRedDark: rgb(92, 6, 9);
 // BORDERS FOR WHATEVER
 
 $border-white-small: 0.1rem solid white;
+$border-black-small: 0.1rem solid black;
 
 // PADDINGS/MARGINS FOR QUERIES
 
 $padding-576: 0.2rem;
+$padding-768: 0.5rem;
 $margin-576: 0.2rem;
+$margin-768: 0.5rem;
+
+// FOR FADES
+
+$faded-offset: 40px !default;
+$faded-blur-radius: 20px !default;
+$faded-spread-radius: 16px !default;

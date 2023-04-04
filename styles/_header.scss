@@ -2,7 +2,7 @@
 
 /* CLASSES */
 .navbar > .container-fluid {
-    justify-content: space-around;
+    justify-content: space-between;
     a {
         margin: 0;
         padding: 0;
@@ -15,14 +15,22 @@
     .navbar-toggler {
         margin: 0;
         padding: 0.5rem;
+        color: black;
+        border-color: black;
     }
 }
 
-.punchline {
-    width: auto;
-    font-size: 1.1rem;
+.nav-item {
+    font-size: 1.6rem;
+    border: $border-black-small;
+    margin: 0.1rem 0;
+    &:hover {
+        filter: invert(100%)
+    }
 }
 
 .brand_logo {
     height: 5.5rem;
+    animation: heartbeat 1s infinite alternate;
+	transform-origin: center;
 }

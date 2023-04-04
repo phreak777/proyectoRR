@@ -6,9 +6,9 @@
 @import "header";
 @import "footer";
 @import "gallery";
+@import "mixins";
 @import "gmap";
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital@0;1&family=Roboto:ital@0;1&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Irish+Grover&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Poppins:ital@0;1&family=Roboto:ital@0;1&display=swap');
 
 /* STYLE RESET */
 * {
@@ -42,18 +42,30 @@
 
 /* HTML TAGS */
 body {
+    font-family: Barlow;
+    min-height: 100vh;
     background-color: black;
     color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 header {
+    width: 100%;
     background-color: $color-reinaRed;
     padding: $padding-576;
 }
 
 footer {
+    margin-top: auto;
+    position: sticky;
+    width: 100%;
     background-color: $color-reinaRed;
     padding: $padding-576;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     text-align: center;
 }
 
@@ -62,23 +74,26 @@ a {
     color: white;
 }
 
-section {
-    padding: $padding-576;
-    h1, h2, h3 {
-        text-align: center;
-    }
-    p {
-        text-align: justify;
-    }
-}
-
-article {
-    padding: $padding-576;
-    h1, h2, h3 {
-        text-align: center;
-    }
-    p {
-        text-align: justify;
+main {
+    width: 95%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    section, article {
+        width: 100%;
+        padding: $padding-576;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        h1, h2, h3 {
+            font-weight: bold;
+            text-align: center;
+            margin: 0 0 1rem;
+        }
+        p {
+            text-align: justify;
+            margin: 0 0 1rem;
+        }
     }
 }
 
@@ -120,13 +135,44 @@ article {
 }
 
 .newsletter {
+    width: 80%;
     display: flex;
     flex-direction: column;
     align-items: center;
     input {
         margin: 0.4rem 0;
-        width: 90%;
+        width: 100%;
     }
 }
 
-@import "queries";
+/* IDs */
+#logo-card {
+    background-color: white;
+    height: 18rem;
+    border-radius: 1rem;
+    margin: 1rem 0;
+    transition: width 2s, height 2s, background-color 2s, rotate 2s;
+    &:hover {
+        animation-name: color_invert;
+        animation-duration: 4s;
+    }
+}
+
+/* ANIMATION KEYFRAMES */
+@keyframes color_invert {
+    0%      { filter: invert(0%); }
+    20%     { filter: invert(100%); }
+    80%     { filter: invert(100%); }
+    100%    { filter: invert(0%); }
+}
+
+@keyframes heartbeat{
+	0%      { transform: scale(1.0); }
+    40%     { transform: scale(1.0); }
+    50%     { transform: scale(1.02); }
+    60%     { transform: scale(1.0); }
+    100%    { transform: scale(1.0); }
+}
+
+/* QUERIES */
+@import "queries"; 
