@@ -1,3 +1,6 @@
+/* Sólo por el ejercicio, traté de adaptar a la menor resolución horizontal posible en header.
+En vez de romper a 320, rompo a 280 y por mobile first mis estilos base son diseñados a 320 indirectamente,
+y ya luego sigo con las queris con min-width. */
 @media only screen and (max-width: 280px) {
     header {
         display: flex;
@@ -17,9 +20,24 @@
     }
 }
 
-@media only screen and (min-width: 576px) {
+@media only screen and (min-width: 350px) {
     .mapouter {
         display: block;
+    }
+}
+
+@media only screen and (min-width: 480px) {
+    nav.navbar > div.container-fluid, footer > div.container-fluid {
+        width: 90%;
+    }
+    .carousel .carousel-inner {
+        width: 400px;
+    }
+}
+
+@media only screen and (min-width: 576px) {
+    nav.navbar > div.container-fluid, footer > div.container-fluid {
+        width: 85%;
     }
     .foot_links {
         width: 60%;
@@ -30,26 +48,83 @@
     main {
         max-width: 80%;
     }
+    nav.navbar > div.container-fluid, footer > div.container-fluid {
+        width: 80%;
+    }
     footer {
         flex-direction: row;
         justify-content: space-between;
         padding: $padding-768;
-        .foot_links {
-            width: 50%;
-            justify-content: left;
+        div.container-fluid {
+            max-width: 80%;
+            flex-direction: row;
+            justify-content: space-between;
+            .foot_h > h3, div.foot_h > a > h3 {
+                font-size: 1.4rem;
+            }
+            .foot_links {
+                width: 70%;
+                justify-content: left;
+                a {
+                    display: flex;
+                    margin-left: 2.5rem;
+                }
+            }
         }
     }
-    .date_card {
+    .section-dates, .section-news {
+        display: flex;
         flex-direction: row;
-        justify-content: space-evenly;
+        justify-content: center;
+        flex-wrap: wrap;
+        h1 {
+            width: 100%;
+        }
+        article {
+            width: auto;
+        }
     }
-    .mapouter {
-        margin: $margin-768;
+    .carousel .carousel-inner {
+        width: 800px;
+    }
+}
+
+@media only screen and (min-width: 992px) {
+    body {
+        font-size: 1.3rem;
+    }
+    .section-contact {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        h1 {
+            width: 100%;
+        }
+        article {
+            color: black;
+            background-color: white;
+            border-radius: 1rem;
+            margin: 0.5rem;
+            padding: 1rem;
+            height: auto;
+            width: 45%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            p {
+                font-weight: bolder;
+                line-height: 1.7rem;
+            }
+        }
+    }
+    .news_month {
+        height: 40vh;
     }
 }
 
 @media only screen and (min-width: 1200px) {
-    main {
-        max-width: 70%;
+    nav.navbar > div.container-fluid {
+        width: 70%;
     }
 }

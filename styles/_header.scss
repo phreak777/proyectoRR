@@ -15,15 +15,15 @@
     .navbar-toggler {
         margin: 0;
         padding: 0.5rem;
-        color: black;
-        border-color: black;
+        border: 0.2rem solid black;
     }
 }
 
 .nav-item {
+    color: black;
     font-size: 1.6rem;
-    border: $border-black-small;
-    margin: 0.1rem 0;
+    font-weight: bolder;
+    margin: 0.1rem 0 0.1rem 0.5rem;
     &:hover {
         filter: invert(100%)
     }

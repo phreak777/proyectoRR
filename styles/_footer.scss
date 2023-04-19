@@ -1,20 +1,28 @@
 /* HTML TAGS */
 
 /* CLASSES */
-.foot_h {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-}
-
-.foot_links {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    width: 100%;
-    a {
-        height: 48px;
-        width: 48px;
+footer {
+    div.container-fluid {
+        display: flex;
+        flex-direction: column;
+        .foot_h {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            h3, a> h3 {
+                font-size: 1.2rem;
+            }
+        }
+        .foot_links {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+            width: 100%;
+            a {
+                height: 48px;
+                width: 48px;
+            }
+        }
     }
 }

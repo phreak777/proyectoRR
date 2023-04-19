@@ -2,16 +2,16 @@
 
 .mapouter {
     display: none;
-    height: 300px;
-    width: 400px;
-    margin: $margin-576;
+    max-height: 300px;
+    max-width: 400px;
 }
 
 .gmap_canvas {
+    border-radius: 1rem;
     overflow: hidden;
     background: none !important;
-    height: 300px;
-    width: 400px;
+    max-height: 300px;
+    max-width: 400px;
     filter: invert(90%); /* agregado mío solo por curiosidad */
     iframe {
         width: 400px;

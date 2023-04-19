@@ -25,14 +25,14 @@ Sin embargo, aquí están para por lo menos demostrar el ejercicio
 .navbar > .container-fluid .navbar-toggler {
   margin: 0;
   padding: 0.5rem;
-  color: black;
-  border-color: black;
+  border: 0.2rem solid black;
 }
 
 .nav-item {
+  color: black;
   font-size: 1.6rem;
-  border: 0.1rem solid black;
-  margin: 0.1rem 0;
+  font-weight: bolder;
+  margin: 0.1rem 0 0.1rem 0.5rem;
 }
 .nav-item:hover {
   filter: invert(100%);
@@ -46,20 +46,26 @@ Sin embargo, aquí están para por lo menos demostrar el ejercicio
 
 /* HTML TAGS */
 /* CLASSES */
-.foot_h {
+footer div.container-fluid {
+  display: flex;
+  flex-direction: column;
+}
+footer div.container-fluid .foot_h {
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: center;
 }
-
-.foot_links {
+footer div.container-fluid .foot_h h3, footer div.container-fluid .foot_h a > h3 {
+  font-size: 1.2rem;
+}
+footer div.container-fluid .foot_links {
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
   width: 100%;
 }
-.foot_links a {
+footer div.container-fluid .foot_links a {
   height: 48px;
   width: 48px;
 }
@@ -71,12 +77,11 @@ Sin embargo, aquí están para por lo menos demostrar el ejercicio
   justify-content: center;
 }
 .carousel .carousel-inner {
-  width: 90%;
+  width: 240px;
 }
 
 /* CLASSES */
 section .gallery_video {
-  border: 0.1rem solid white;
   padding: 0.2rem;
   display: flex;
   flex-direction: column;
@@ -91,7 +96,6 @@ section .gallery_video div a {
   text-decoration: underline;
 }
 section .gallery_pic {
-  border: 0.1rem solid white;
   padding: 0.2rem;
   display: grid;
   justify-items: center;
@@ -100,11 +104,16 @@ section .gallery_pic {
   grid-auto-flow: dense;
 }
 section .gallery_pic img {
-  border: none;
+  border: 0.25 solid white;
   padding: 0;
   width: 95%;
   max-width: 25rem;
   margin: 0.2rem;
+}
+
+.carousel-item > iframe {
+  width: 560px;
+  height: 315px;
 }
 
 .faded {
@@ -129,16 +138,16 @@ section .gallery_pic img {
 /* Buscado en internet para meter los google maps */
 .mapouter {
   display: none;
-  height: 300px;
-  width: 400px;
-  margin: 0.2rem;
+  max-height: 300px;
+  max-width: 400px;
 }
 
 .gmap_canvas {
+  border-radius: 1rem;
   overflow: hidden;
   background: none !important;
-  height: 300px;
-  width: 400px;
+  max-height: 300px;
+  max-width: 400px;
   filter: invert(90%); /* agregado mío solo por curiosidad */
 }
 .gmap_canvas iframe {
@@ -174,6 +183,42 @@ section .gallery_pic img {
 
 .nav-item {
   text-align: center;
+}
+
+.me-auto {
+  margin-right: 0 !important;
+  margin-left: auto !important;
+}
+
+.card {
+  padding: 0.25rem;
+  margin: 0.5rem;
+  border-radius: 1rem;
+  color: black;
+  min-width: 130px;
+  max-width: 300px;
+}
+.card .card-body h2 {
+  font-size: 1.5rem;
+}
+.card .card-body h3 {
+  font-size: 1.3rem;
+}
+
+.card-body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.btn-primary {
+  background-color: rgb(168, 16, 22);
+  border-color: rgb(168, 16, 22);
+}
+.btn-primary:hover, .btn-primary:focus {
+  background-color: rgb(168, 16, 22);
+  border-color: rgb(168, 16, 22);
+  box-shadow: none;
 }
 
 /* HTML TAGS */
@@ -226,11 +271,25 @@ main section, main article {
 main section h1, main section h2, main section h3, main article h1, main article h2, main article h3 {
   font-weight: bold;
   text-align: center;
-  margin: 0 0 1rem;
+  margin: 0 0 0.5rem;
 }
 main section p, main article p {
   text-align: justify;
-  margin: 0 0 1rem;
+  margin: 0 0 0.5rem;
+}
+
+label {
+  color: black;
+  font-weight: bold;
+}
+
+input {
+  border: 0.2rem solid black;
+  color: rgb(168, 16, 22);
+  padding: 0.2rem;
+  border-radius: 1rem;
+  width: calc(33.333333% - 20px);
+  box-sizing: border-box;
 }
 
 /* CLASSES */
@@ -238,32 +297,70 @@ main section p, main article p {
   text-decoration: underline;
 }
 
-.date_card {
-  border: 0.1rem solid white;
-  margin: 0.4rem 0;
+.submit {
+  background-color: rgb(168, 16, 22);
+  color: white;
+}
+
+.section-dates {
   display: flex;
   flex-direction: column;
   align-items: center;
-  text-align: center;
 }
-.date_card div p {
-  text-align: center;
-  margin: 0;
-}
-.date_card div a {
+
+.card-link {
+  color: black;
   text-decoration: underline;
 }
 
+.section-contact {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+}
+.section-contact h1 {
+  width: 100%;
+}
+.section-contact article {
+  color: black;
+  background-color: white;
+  border-radius: 1rem;
+  margin: 0.5rem;
+  padding: 1rem;
+  height: auto;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.section-contact article p {
+  font-weight: bolder;
+}
+
+.section-news {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .news_month {
-  border: 0.1rem solid white;
-  margin: 0.4rem 0;
+  background-color: white;
+  padding: 0.25rem;
+  margin: 0.5rem;
+  border-radius: 1rem;
+  color: black;
+  min-width: 130px;
+  max-width: 300px;
+  height: 25vh;
+  font-weight: 600;
 }
 .news_month div {
-  border-top: 0.1rem dotted white;
+  border-top: 0.1rem dotted black;
   display: flex;
   flex-direction: column;
 }
 .news_month div a {
+  color: black;
   text-align: center;
 }
 
@@ -324,6 +421,9 @@ main section p, main article p {
   }
 }
 /* QUERIES */
+/* Sólo por el ejercicio, traté de adaptar a la menor resolución horizontal posible en header.
+En vez de romper a 320, rompo a 280 y por mobile first mis estilos base son diseñados a 320 indirectamente,
+y ya luego sigo con las queris con min-width. */
 @media only screen and (max-width: 280px) {
   header {
     display: flex;
@@ -340,9 +440,22 @@ main section p, main article p {
     width: 100%;
   }
 }
-@media only screen and (min-width: 576px) {
+@media only screen and (min-width: 350px) {
   .mapouter {
     display: block;
+  }
+}
+@media only screen and (min-width: 480px) {
+  nav.navbar > div.container-fluid, footer > div.container-fluid {
+    width: 90%;
+  }
+  .carousel .carousel-inner {
+    width: 400px;
+  }
+}
+@media only screen and (min-width: 576px) {
+  nav.navbar > div.container-fluid, footer > div.container-fluid {
+    width: 85%;
   }
   .foot_links {
     width: 60%;
@@ -352,25 +465,81 @@ main section p, main article p {
   main {
     max-width: 80%;
   }
+  nav.navbar > div.container-fluid, footer > div.container-fluid {
+    width: 80%;
+  }
   footer {
     flex-direction: row;
     justify-content: space-between;
     padding: 0.5rem;
   }
-  footer .foot_links {
-    width: 50%;
+  footer div.container-fluid {
+    max-width: 80%;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  footer div.container-fluid .foot_h > h3, footer div.container-fluid div.foot_h > a > h3 {
+    font-size: 1.4rem;
+  }
+  footer div.container-fluid .foot_links {
+    width: 70%;
     justify-content: left;
   }
-  .date_card {
-    flex-direction: row;
-    justify-content: space-evenly;
+  footer div.container-fluid .foot_links a {
+    display: flex;
+    margin-left: 2.5rem;
   }
-  .mapouter {
+  .section-dates, .section-news {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .section-dates h1, .section-news h1 {
+    width: 100%;
+  }
+  .section-dates article, .section-news article {
+    width: auto;
+  }
+  .carousel .carousel-inner {
+    width: 800px;
+  }
+}
+@media only screen and (min-width: 992px) {
+  body {
+    font-size: 1.3rem;
+  }
+  .section-contact {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+  .section-contact h1 {
+    width: 100%;
+  }
+  .section-contact article {
+    color: black;
+    background-color: white;
+    border-radius: 1rem;
     margin: 0.5rem;
+    padding: 1rem;
+    height: auto;
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .section-contact article p {
+    font-weight: bolder;
+    line-height: 1.7rem;
+  }
+  .news_month {
+    height: 40vh;
   }
 }
 @media only screen and (min-width: 1200px) {
-  main {
-    max-width: 70%;
+  nav.navbar > div.container-fluid {
+    width: 70%;
   }
 }/*# sourceMappingURL=styles.css.map */
